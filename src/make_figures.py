@@ -49,7 +49,7 @@ def plot_overview(df):
     axes[1, 0].set_title("Маленькие дети выживали чаще остальных")
     axes[1, 0].set_xlabel("Возраст пассажиров, лет")
     axes[1, 0].set_ylabel("Количество пассажиров")
-    axes[1, 1].set_title("Выжившие платили за билет больше (медиана 26 £ против 10.5 £)")
+    axes[1, 1].set_title("Выжившие платили за билет больше\n(медиана 26 £ против 10.5 £)")
     axes[1, 1].set_ylabel("Стоимость билета, £ (лог. шкала)")
     axes[0, 1].axhline(mean, color="gray", linestyle="--", linewidth=1)
     axes[0, 1].text(0.45, mean + 0.02, f"в среднем {mean:.0%}", color="gray", ha="right")
@@ -116,7 +116,7 @@ def plot_survival_fare(df):
 
     ax.set_yscale("log")
     ax.legend()
-    ax.set_title("Возраст, стоимость билета и выживание")
+    ax.set_title("Выжившие чаще встречаются среди дорогих билетов")
     ax.set_xlabel("Возраст, лет")
     ax.set_ylabel("Стоимость, £ (лог. шкала)")
     save(fig, "04_survival_fare.png")
